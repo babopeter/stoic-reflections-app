@@ -27,6 +27,7 @@
 ## Future Improvements (Backlog)
 
 ### Functionalities
+*   **Daily Reflection Form:** Create a daily reflection form.
 *   **Delete Reflections:** Add the ability to delete past reviews.
 *   **Edit Reflections:** Add the ability to edit existing reviews.
 *   **Dark Mode:** Implement a dark theme toggle.
