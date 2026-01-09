@@ -2,6 +2,38 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Save, X, ArrowLeft } from 'lucide-react';
 
+const Section = ({ title, children, quote }) => (
+  <div className="bg-white border border-stone-200 rounded-lg p-8 mb-8 shadow-sm">
+    <h3 className="text-xl font-bold mb-4 border-b border-stone-100 pb-2">{title}</h3>
+    {quote && <p className="italic text-stone-500 mb-6 text-sm">“{quote}”</p>}
+    {children}
+  </div>
+);
+
+const Checkbox = ({ label, checked, onChange }) => (
+  <label className="flex items-center gap-3 mb-3 cursor-pointer group">
+    <input 
+      type="checkbox" 
+      checked={checked} 
+      onChange={onChange}
+      className="w-5 h-5 accent-stone-800 rounded border-stone-300" 
+    />
+    <span className="text-stone-700 group-hover:text-stone-900 transition-colors">{label}</span>
+  </label>
+);
+
+const TextArea = ({ label, value, onChange, placeholder }) => (
+  <div className="mb-4">
+    <label className="block text-sm font-semibold text-stone-600 mb-1">{label}</label>
+    <textarea 
+      value={value} 
+      onChange={(e) => onChange(e.target.value)}
+      placeholder={placeholder}
+      className="w-full p-3 border border-stone-200 rounded-md focus:outline-none focus:ring-1 focus:ring-stone-500 min-h-[100px] font-serif"
+    />
+  </div>
+);
+
 const ReviewForm = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -74,38 +106,6 @@ const ReviewForm = () => {
     .then(() => navigate('/'))
     .catch(err => console.error('Error saving:', err));
   };
-
-  const Section = ({ title, children, quote }) => (
-    <div className="bg-white border border-stone-200 rounded-lg p-8 mb-8 shadow-sm">
-      <h3 className="text-xl font-bold mb-4 border-b border-stone-100 pb-2">{title}</h3>
-      {quote && <p className="italic text-stone-500 mb-6 text-sm">“{quote}”</p>}
-      {children}
-    </div>
-  );
-
-  const Checkbox = ({ label, checked, onChange }) => (
-    <label className="flex items-center gap-3 mb-3 cursor-pointer group">
-      <input 
-        type="checkbox" 
-        checked={checked} 
-        onChange={onChange}
-        className="w-5 h-5 accent-stone-800 rounded border-stone-300" 
-      />
-      <span className="text-stone-700 group-hover:text-stone-900 transition-colors">{label}</span>
-    </label>
-  );
-
-  const TextArea = ({ label, value, onChange, placeholder }) => (
-    <div className="mb-4">
-      <label className="block text-sm font-semibold text-stone-600 mb-1">{label}</label>
-      <textarea 
-        value={value} 
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        className="w-full p-3 border border-stone-200 rounded-md focus:outline-none focus:ring-1 focus:ring-stone-500 min-h-[100px] font-serif"
-      />
-    </div>
-  );
 
   return (
     <div className="max-w-3xl mx-auto">
