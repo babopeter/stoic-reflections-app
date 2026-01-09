@@ -35,6 +35,7 @@
 *   **Admin Mode:** Allow users to edit/configure the reflection form templates (e.g., change questions).
 *   **AI Summary:** Integrate an LLM to analyze, summarize, and reflect on the user's inputs.
 *   **Encryption:** Encrypt JSON files using a user-provided password.
+*   **Encrypted Backup:** Implement a secure, encrypted backup solution for the data directory.
 
 ### Design
 *   **Form Polish:** Fix minor UI/UX issues in the weekly reflection form.
