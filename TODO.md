@@ -40,3 +40,6 @@
 
 ### Design
 *   ~~**Form Polish:** Fix minor UI/UX issues in the weekly reflection form.~~
+
+### DevOps & Deployment
+*   **Dockerize Application:** Create Dockerfiles for client/server and a docker-compose setup for easy deployment.
