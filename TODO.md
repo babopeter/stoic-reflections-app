@@ -39,4 +39,4 @@
 *   **Encrypted Backup:** Implement a secure, encrypted backup solution for the data directory.
 
 ### Design
-*   **Form Polish:** Fix minor UI/UX issues in the weekly reflection form.
+*   ~~**Form Polish:** Fix minor UI/UX issues in the weekly reflection form.~~
