@@ -237,6 +237,7 @@ const ReviewForm = () => {
 
       {/* 5. Speech & Action Review */}
       <Section title="5. Speech & Action Review" quote="Where you stumble, there lies your task. — Seneca">
+        <p className="text-sm font-semibold mb-3">Did I:</p>
         <Checkbox label="Speak when silence was wiser?" checked={formData.speechAction.actions.speakSilence} onChange={() => handleCheckbox('speechAction', 'actions', 'speakSilence')} />
         <Checkbox label="Remain silent when honesty was required?" checked={formData.speechAction.actions.silentHonesty} onChange={() => handleCheckbox('speechAction', 'actions', 'silentHonesty')} />
         <Checkbox label="Act from impulse rather than reason?" checked={formData.speechAction.actions.impulse} onChange={() => handleCheckbox('speechAction', 'actions', 'impulse')} />
@@ -278,7 +279,6 @@ const ReviewForm = () => {
                 onChange={(e) => handleText('correction', 'trigger', e.target.value)}
                 className="bg-transparent border-b border-stone-600 focus:border-white focus:outline-none px-1 text-xl italic font-serif flex-grow min-w-[200px]"
               />
-              <span className="text-xl italic font-serif">occurs,</span>
             </div>
             <div className="flex items-baseline gap-2 flex-wrap">
               <span className="text-xl italic font-serif">I will</span>
