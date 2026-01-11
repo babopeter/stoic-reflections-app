@@ -2,6 +2,8 @@
 
 A local-first web application designed to facilitate weekly Stoic reviews. This app provides a distraction-free environment to reflect on your week using a structured template inspired by Stoic philosophy.
 
+![Stoic Reflection App Screenshot](assets/stoic-reflection-screenshot.png)
+
 ## Features
 
 *   **Interactive Review Form:** A guided, step-by-step interface for your weekly review, covering orientation, attention audit, emotional review, control check, and more.
